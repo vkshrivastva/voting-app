@@ -10,9 +10,11 @@ spec:
     - name: postgres-pod
       image: postgres 
       ports:
-        - ports:
-          containerPort: 5432
+        - containerPort: 5432
       env: 
-        POSTGRES_USER: "postgres"
-        POSTGRES_PASSWORD: "postgres"
-        POSTGRES_HOST_AUTH_METHOD: trust
+        - name: POSTGRES_USER
+          value: "postgres"
+        - name: POSTGRES_PASSWORD
+          value: "postgres"
+        - name: POSTGRES_HOST_AUTH_METHOD
+          value: trust
