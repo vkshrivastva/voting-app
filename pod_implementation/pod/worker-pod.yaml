@@ -6,5 +6,6 @@ metadata:
       name: worker-pod
       app: vks-voting-app
 spec:
-  - name: worker-pod
-    image: kodekloud/examplevotingapp_worker:v1  
+  containers:
+    - name: worker-pod
+      image: kodekloud/examplevotingapp_worker:v1  

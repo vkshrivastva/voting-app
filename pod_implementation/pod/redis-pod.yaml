@@ -6,8 +6,9 @@ metadata:
       name: redis-pod
       app: vks-voting-app
 spec:
-  - name: redis-pod
-    image: redis  
-    ports:
-      - ports:
-        containerPort: 6379
+  containers:
+    - name: redis-pod
+      image: redis  
+      ports:
+        - ports:
+          containerPort: 6379
